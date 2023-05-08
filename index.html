@@ -34,7 +34,10 @@
           var postData = {
               address : data.address,
               jibunAddress : jibunAddress,
-              bcode : data.bcode
+              bcode : data.bcode,
+              userSelectedType : data.userSelectedType,
+              roadname : data.roadname,
+              bname : data.bname
           };
           window.postMessageToiOS(postData);
         },
