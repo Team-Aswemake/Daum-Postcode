@@ -46,8 +46,7 @@
                     bname: data.bname
                 };
                 if (getPlatform() === 'AOS') {
-                    // AOS 테스트 진행을 위한 임시 처리 값
-                    window.Qmarket.postMessage(data.address);
+                    window.postMessageToAOS(postData);
                 } else {
                     window.postMessageToiOS(postData);
                 }
