@@ -21,7 +21,7 @@
     }
 
     function postMessageToAOS(postData) {
-        window.Qmarket.postMessage(postData);
+        window.Qmarket.postMessage(postData.address, postData.jibunAddress, postData.bcode);
     }
 
     var element_layer = document.getElementById('layer');
