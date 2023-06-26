@@ -21,7 +21,7 @@
     }
 
     function postMessageToAOS(postData) {
-        window.Qmarket.postMessage(postData.address, postData.jibunAddress, postData.bcode);
+        window.Qmarket.postMessage(postData.address, postData.jibunAddress, postData.userSelectedType, postData.bcode);
     }
 
     var element_layer = document.getElementById('layer');
@@ -45,6 +45,7 @@
                     roadname: data.roadname,
                     bname: data.bname
                 };
+                console.log(data.userSelectedType)
                 if (getPlatform() === 'AOS') {
                     window.postMessageToAOS(postData);
                 } else {
