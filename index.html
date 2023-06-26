@@ -45,7 +45,6 @@
                     roadname: data.roadname,
                     bname: data.bname
                 };
-                console.log(data.userSelectedType)
                 if (getPlatform() === 'AOS') {
                     window.postMessageToAOS(postData);
                 } else {
