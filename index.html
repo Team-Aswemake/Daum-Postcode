@@ -44,7 +44,8 @@
                     bcode: data.bcode,
                     userSelectedType: data.userSelectedType,
                     roadname: data.roadname,
-                    bname: data.bname
+                    bname: data.bname,
+                    zonecode: data.zonecode
                 };
                 if (getPlatform() === 'AOS') {
                     window.postMessageToAOS(postData);
