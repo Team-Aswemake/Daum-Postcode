@@ -22,7 +22,7 @@
     }
 
     function postMessageToAOS(postData) {
-        window.Qmarket.postMessage(postData.address, postData.jibunAddress, postData.userSelectedType, postData.bcode);
+        window.Qmarket.postMessage(postData.address, postData.roadAddress, postData.jibunAddress, postData.userSelectedType, postData.bcode, postData.roadname, postData.zonecode);
     }
 
     var element_layer = document.getElementById('layer');
@@ -40,11 +40,14 @@
 
                 var postData = {
                     address: data.address,
+                    roadAddress : data.roadAddress,
                     jibunAddress: jibunAddress,
                     bcode: data.bcode,
                     userSelectedType: data.userSelectedType,
                     roadname: data.roadname,
-                    bname: data.bname
+                    bname: data.bname,
+                    zonecode: data.zonecode
+
                 };
                 if (getPlatform() === 'AOS') {
                     window.postMessageToAOS(postData);
